@@ -1,0 +1,20 @@
+<div class="container">
+    <table>
+        <thead>
+            <tr>
+                <th>Stt</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products;index as i">
+                <td>{{i +1}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.price}}</td>
+                <td><button (click)="removeItem(product.id)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
